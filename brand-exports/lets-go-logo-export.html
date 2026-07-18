@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Green Oaisys — "Let's GO" circle logo exporter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0A2A1C; --cream:#FDFCF8; --green:#1FC16B; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f4f4f0;color:#0A2A1C;padding:28px;}
+  h1{font-size:1.15rem;margin:0 0 4px}
+  p{margin:4px 0 18px;color:#4a5c52;font-size:.9rem;max-width:640px}
+  .row{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
+  .card{background:#fff;border:1px solid #e2e2da;border-radius:14px;padding:18px}
+  .swatch{background:conic-gradient(#e9e9e2 25%,#fff 0 50%,#e9e9e2 0 75%,#fff 0)10px 10px/20px 20px;border-radius:12px;display:inline-block;line-height:0}
+  canvas{width:260px;height:260px;border-radius:12px}
+  button{margin-top:14px;display:block;width:100%;background:var(--ink);color:var(--cream);border:0;border-radius:10px;padding:11px 16px;font-size:.9rem;font-weight:600;cursor:pointer}
+  button:hover{background:#0f3826}
+  label{font-size:.8rem;color:#4a5c52;display:block;margin:14px 0 4px}
+  select{padding:8px;border-radius:8px;border:1px solid #ccc}
+  .note{font-size:.78rem;color:#7a8a80;margin-top:8px}
+</style>
+</head>
+<body>
+  <h1>“Let’s GO” circle logo</h1>
+  <p>Exact match to the site lockup — Caveat “Let’s” over the gradient GO mark on a dark-green circle. Transparent outside the circle. Pick a size and download; the PNG also downloads automatically once the font loads.</p>
+
+  <div class="row">
+    <div class="card">
+      <span class="swatch"><canvas id="cv" width="2048" height="2048"></canvas></span>
+      <label for="size">Export size</label>
+      <select id="size">
+        <option value="1024">1024 × 1024</option>
+        <option value="2048" selected>2048 × 2048</option>
+        <option value="4096">4096 × 4096 (max)</option>
+      </select>
+      <label for="bg">Background</label>
+      <select id="bg">
+        <option value="transparent" selected>Transparent</option>
+        <option value="white">White</option>
+      </select>
+      <button id="dl">Download PNG</button>
+      <div class="note">Filename: lets-go-circle.png</div>
+    </div>
+  </div>
+
+<script>
+const GO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -86 164 96" width="164" height="96">
+<defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="-37.1" x2="163.8" y2="-37.1"><stop offset="0" stop-color="#1FC16B"/><stop offset="1" stop-color="#8CC412"/></linearGradient></defs>
+<path d="M55.967999999999996 -50.879999999999995Q53.954 -54.589999999999996 50.191 -56.551Q46.428 -58.512 41.339999999999996 -58.512Q32.542 -58.512 27.242 -52.735Q21.942 -46.958 21.942 -37.312Q21.942 -27.029999999999998 27.506999999999998 -21.253Q33.071999999999996 -15.475999999999999 42.824 -15.475999999999999Q49.501999999999995 -15.475999999999999 54.113 -18.868Q58.724 -22.259999999999998 60.844 -28.619999999999997H37.842V-41.976H77.274V-25.122Q75.25999999999999 -18.338 70.437 -12.508000000000001Q65.614 -6.678 58.194 -3.074Q50.774 0.53 41.446 0.53Q30.422 0.53 21.783 -4.293Q13.144 -9.116 8.321 -17.701999999999998Q3.4979999999999998 -26.288 3.4979999999999998 -37.312Q3.4979999999999998 -48.336 8.321 -56.975Q13.144 -65.614 21.73 -70.437Q30.316 -75.25999999999999 41.339999999999996 -75.25999999999999Q54.696 -75.25999999999999 63.864999999999995 -68.794Q73.03399999999999 -62.327999999999996 76.002 -50.879999999999995Z" fill="url(#g)"/>
+<circle cx="121.77" cy="-37.10" r="30.5" fill="none" stroke="url(#g)" stroke-width="17"/>
+</svg>`;
+
+const goImg = new Image();
+goImg.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(GO_SVG);
+
+function draw(S){
+  const cv = document.getElementById('cv');
+  cv.width = S; cv.height = S;
+  const ctx = cv.getContext('2d');
+  ctx.clearRect(0,0,S,S);
+  const white = document.getElementById('bg').value === 'white';
+  const circleFill = white ? '#FFFFFF' : '#0A2A1C';   // circle colour
+  const letsFill   = white ? '#0A2A1C' : '#FDFCF8';   // "Let's" colour (flips for contrast)
+  const k = S/400;                         // everything below is in the approved 400-unit preview space
+  // circle
+  ctx.beginPath(); ctx.arc(200*k,200*k,198*k,0,Math.PI*2); ctx.fillStyle = circleFill; ctx.fill();
+  // "Let's" — Caveat, rotated -5deg (fixed size, alphabetic baseline)
+  ctx.save();
+  ctx.translate(200*k, 150*k);
+  ctx.rotate(-5*Math.PI/180);
+  ctx.fillStyle = letsFill;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+  ctx.font = '600 ' + Math.round(168*k) + 'px Caveat, cursive';
+  ctx.fillText('Let’s', 0, 0);
+  ctx.restore();
+  // GO mark — same placement/scale as the preview
+  ctx.save();
+  ctx.translate(200*k, 252*k);
+  ctx.scale(2.19*k, 2.19*k);
+  ctx.translate(-82, 37.1);
+  ctx.drawImage(goImg, 0, -86, 164, 96);
+  ctx.restore();
+}
+
+function render(){
+  const S = +document.getElementById('size').value;
+  draw(S);
+}
+function download(){
+  render();
+  const name = document.getElementById('bg').value==='white' ? 'lets-go-circle-white.png' : 'lets-go-circle.png';
+  document.getElementById('cv').toBlob(b=>{
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(b); a.download=name; a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+  },'image/png');
+}
+document.getElementById('dl').addEventListener('click', download);
+document.getElementById('size').addEventListener('change', render);
+document.getElementById('bg').addEventListener('change', render);
+
+goImg.onload = ()=> (document.fonts && document.fonts.ready ? document.fonts.load('600 200px Caveat').then(()=>document.fonts.ready) : Promise.resolve())
+  .then(()=>{ render(); setTimeout(download, 300); });
+</script>
+</body>
+</html>
