@@ -13,14 +13,15 @@
   };
   // Google Forms lead capture. Create a Google Form, then paste its formResponse URL
   // and the entry.XXXX field IDs here (see SETUP.md). Leave action '' to disable posting.
+  const GFORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSc8f4wDb0tj3P2BrN8KWYLDKfawUNZ2E4tO3Ja__evigGZIQw/formResponse';
   const GFORM = {
     contact: {
-      action: '',   // e.g. https://docs.google.com/forms/d/e/FORM_ID/formResponse
-      fields: { name: 'entry.1111', business: 'entry.2222', email: 'entry.3333', wa: 'entry.4444', message: 'entry.5555' }
+      action: GFORM_ACTION,
+      fields: { name: 'entry.374203874', business: 'entry.883999899', email: 'entry.1224152338', wa: 'entry.1409587846', message: 'entry.310011525' }
     },
     newsletter: {
-      action: '',
-      fields: { name: 'entry.1111', email: 'entry.2222', wa: 'entry.3333' }
+      action: GFORM_ACTION,
+      fields: { name: 'entry.374203874', email: 'entry.1224152338', wa: 'entry.1409587846' }
     }
   };
 
