@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-title-key="contact_title">
+<html lang="en" dir="ltr" data-title-key="blog_title">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Green Oaisys</title>
-  <meta name="description" content="Get in touch with Green Oaisys — message us or chat on WhatsApp. We help Saudi-based SMEs run on systems.">
+  <title>Blog — Green Oaisys</title>
+  <meta name="description" content="Practical, weekly ideas on building a Saudi-based business that runs on systems, not on you — delegation, AI, and operating discipline.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=5">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=5">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=5">
@@ -25,8 +25,8 @@
         <a href="index.html#method" data-i18n="nav_method">How it works</a>
         <a href="index.html#offers" data-i18n="nav_offers">Offers</a>
         <a href="index.html#proof" data-i18n="nav_proof">Case studies</a>
-        <a href="index.html#founders" data-i18n="nav_about">About</a>
         <a href="blog.html" data-i18n="nav_blog">Blog</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
       </nav>
       <div class="header-actions">
         <button class="lang-toggle" id="langToggle" aria-label="Switch language">العربية</button>
@@ -36,37 +36,36 @@
   </header>
 
   <main id="top">
-    <section class="contact-section">
-      <div class="container contact-grid">
-        <div class="contact-intro">
-          <span class="kicker" data-i18n="nav_contact">Contact</span>
-          <h1 data-i18n="contact_h1">Talk to us.</h1>
-          <p class="section-sub" data-i18n="contact_sub">A question, a project, or just exploring? Send a message or reach us on WhatsApp — we reply fast.</p>
-          <div class="contact-direct">
-            <a class="btn btn-primary" data-wa href="#" data-i18n="contact_wa_btn">Chat on WhatsApp</a>
-            <a class="btn btn-secondary" href="mailto:hello@greenoaisys.com" data-i18n="contact_email_btn">Email us</a>
-          </div>
-          <p class="contact-email-line"><span data-i18n="contact_email_label">Email</span>: <a href="mailto:hello@greenoaisys.com">hello@greenoaisys.com</a></p>
-          <p><a href="index.html" data-i18n="contact_back">← Back to home</a></p>
-        </div>
+    <section class="blog-hero">
+      <div class="container">
+        <span class="kicker" data-i18n="nav_blog">Blog</span>
+        <h1 data-i18n="blog_h1">Systems, simplified.</h1>
+        <p class="section-sub" data-i18n="blog_sub">Practical, weekly ideas on building a business that doesn't run on you — delegation, AI, and the systems behind consistent growth.</p>
+      </div>
+    </section>
 
-        <div class="contact-card">
-          <h2 data-i18n="contact_form_h">Send us a message</h2>
-          <form class="contact-form" data-gform="contact" novalidate>
-            <input type="text" name="company_hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="cf-row">
-              <input type="text" name="name" autocomplete="name" required data-i18n-ph="ph_name" placeholder="Your name">
-              <input type="text" name="business" autocomplete="organization" data-i18n-ph="ph_business" placeholder="Business name">
-            </div>
-            <div class="cf-row">
-              <input type="email" name="email" autocomplete="email" required data-i18n-ph="ph_email" placeholder="Email">
-              <input type="tel" name="wa" inputmode="tel" autocomplete="tel" required data-i18n-ph="ph_wa" placeholder="WhatsApp (e.g. +9665XXXXXXXX)">
-            </div>
-            <textarea name="message" rows="4" data-i18n-ph="ph_message" placeholder="How can we help?"></textarea>
-            <button type="submit" class="btn btn-primary" data-i18n="contact_btn">Send message</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
+    <section class="blog-list">
+      <div class="container">
+        <div class="post-grid">
+          <a class="post-card" href="blog-1.html">
+            <span class="post-tag">Systems 101</span>
+            <h2>Your business doesn't have a hustle problem. It has a systems problem.</h2>
+            <p>Working harder feels like progress. But if the business stops when you step away, the fix isn't more hours — it's a system. Here's what that actually means.</p>
+            <span class="post-read" data-i18n="blog_read">Read the article →</span>
+          </a>
+          <div class="post-card soon" aria-hidden="true">
+            <span class="post-tag" data-i18n="blog_soon_tag">Coming soon</span>
+            <h2>Delegation without losing control</h2>
+            <p>How to hand work to your team — and stop being the bottleneck for every decision.</p>
+          </div>
+          <div class="post-card soon" aria-hidden="true">
+            <span class="post-tag" data-i18n="blog_soon_tag">Coming soon</span>
+            <h2>Where AI actually earns its keep in an SME</h2>
+            <p>The handful of tasks worth automating first — and the ones to leave alone.</p>
+          </div>
         </div>
+        <p class="blog-note" data-i18n="blog_soon">More articles every week. Want them in your inbox? Join the newsletter on the home page.</p>
+        <p><a href="index.html" data-i18n="blog_back">← Back to home</a></p>
       </div>
     </section>
   </main>
@@ -77,8 +76,8 @@
       <p data-i18n="footer_tag">Turning Saudi-based businesses into brands — one system at a time.</p>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="index.html#brand" data-i18n="nav_brand">Why systems</a>
-        <a href="index.html#method" data-i18n="nav_method">How it works</a>
         <a href="index.html#offers" data-i18n="nav_offers">Offers</a>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
       </nav>
       <p>© 2026 Green Oaisys</p>
