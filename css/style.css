@@ -1056,3 +1056,18 @@ body[dir="rtl"] .post-tag { letter-spacing: 0; }
 .post-cta p { font-size: 0.98rem; color: var(--ink-soft); margin: 0 auto 16px; max-width: 520px; }
 
 @media (max-width: 860px) { .post-grid { grid-template-columns: 1fr; } }
+
+/* ===== Case cards with photos (override) ===== */
+.proof .case-grid { grid-template-columns: repeat(3, 1fr); }
+.proof .case { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.case-img { width: 100%; aspect-ratio: 40 / 24; overflow: hidden; background: #e8e8e0; }
+.case-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.proof .case:hover .case-img img { transform: scale(1.05); }
+.case-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+.case-body h3 { font-size: 1.2rem; margin-bottom: 12px; }
+.case-k.pain { color: #C0341D; }
+.case-k.fix { color: var(--green-dark); }
+.case-p { font-size: 0.9rem; color: var(--ink-soft); margin: 3px 0 14px; }
+.case-cta { margin-top: auto; font-weight: 700; color: var(--green-dark); text-decoration: none; font-size: 0.92rem; align-self: flex-start; }
+.case-cta:hover { color: var(--green); }
+@media (max-width: 860px) { .proof .case-grid { grid-template-columns: 1fr; } }
