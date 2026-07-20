@@ -963,3 +963,32 @@ body[dir="rtl"] .xray-sprint .tier { letter-spacing: 0; }
   .wa-float { width: 52px; height: 52px; bottom: 16px; inset-inline-end: 16px; }
 }
 body[dir="rtl"] .wa-float { inset-inline-end: 22px; }
+
+/* ===== Spam honeypot (hidden from humans) ===== */
+.hp-field { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+
+/* ===== Two-product offers ===== */
+.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 44px 0 8px; align-items: stretch; }
+.product { position: relative; background: var(--white); border-radius: var(--radius); padding: 32px 30px; box-shadow: var(--shadow); display: flex; flex-direction: column; border: 1px solid rgba(10,42,28,0.08); }
+.product.featured { border: 2.5px solid var(--green); }
+.product .badge { position: absolute; top: -14px; inset-inline-start: 28px; background: var(--green); color: var(--ink); font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 100px; }
+.product-tag { display: inline-block; align-self: flex-start; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--violet-dark); background: var(--lavender); padding: 5px 12px; border-radius: 100px; margin-bottom: 14px; }
+body[dir="rtl"] .product-tag { letter-spacing: 0; }
+.product h3 { font-size: 1.5rem; margin-bottom: 4px; }
+.product-price { font-size: 1.5rem; font-weight: 800; color: var(--green-dark); margin-bottom: 10px; }
+.product-desc { font-size: 0.98rem; color: var(--ink-soft); margin-bottom: 18px; }
+.product ul { list-style: none; margin-bottom: 22px; flex-grow: 1; display: grid; gap: 9px; }
+.product li { position: relative; padding-inline-start: 28px; font-size: 0.95rem; color: var(--ink); }
+.product li::before { content: "✓"; position: absolute; inset-inline-start: 0; color: var(--green); font-weight: 800; }
+.product .btn { width: 100%; }
+.product-foot { font-size: 0.82rem; color: var(--ink-soft); margin-top: 12px; text-align: center; }
+
+/* How the X-Ray works */
+.xray-how { margin-top: 40px; text-align: center; }
+.xray-how .deep-eyebrow { color: var(--green-dark); margin-bottom: 18px; }
+.xray-how .xray-flow { margin-top: 6px; }
+.xray-step h4 { font-size: 1rem; margin: 6px 0 8px; }
+
+@media (max-width: 780px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
