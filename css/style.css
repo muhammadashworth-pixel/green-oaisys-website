@@ -1071,3 +1071,64 @@ body[dir="rtl"] .post-tag { letter-spacing: 0; }
 .case-cta { margin-top: auto; font-weight: 700; color: var(--green-dark); text-decoration: none; font-size: 0.92rem; align-self: flex-start; }
 .case-cta:hover { color: var(--green); }
 @media (max-width: 860px) { .proof .case-grid { grid-template-columns: 1fr; } }
+
+/* ================= Build & Launch (secondary) ================= */
+.build-launch { background: var(--cream); }
+.build-launch .kicker { color: var(--violet-dark); background: var(--lavender); }
+.bl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 36px 0 30px;
+}
+.bl-card {
+  background: var(--white);
+  border: 1px solid rgba(10, 42, 28, 0.08);
+  border-radius: 16px;
+  padding: 26px 24px;
+  box-shadow: 0 2px 14px rgba(10, 42, 28, 0.04);
+}
+.bl-ic {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.bl-card h3 {
+  font-size: 1.06rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+.bl-card p { font-size: 0.94rem; line-height: 1.65; color: var(--ink-soft); }
+.bl-card.bl-dark { background: var(--ink); border-color: var(--ink); }
+.bl-card.bl-dark h3 { color: var(--cream); }
+.bl-card.bl-dark p { color: rgba(253, 252, 248, 0.78); }
+
+.bl-ladder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  background: var(--green-tint);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 26px;
+}
+.bl-ladder-step { font-weight: 700; color: var(--green-dark); font-size: 1.05rem; }
+.bl-ladder-arrow { color: var(--lime); font-weight: 700; font-size: 1.05rem; }
+.bl-ladder-note { width: 100%; text-align: center; color: var(--ink-soft); font-size: 0.95rem; }
+
+.bl-line {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  text-align: center;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 500;
+}
+.bl-cta-wrap { text-align: center; }
+
+@media (max-width: 900px) { .bl-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .bl-grid { grid-template-columns: 1fr; } }
