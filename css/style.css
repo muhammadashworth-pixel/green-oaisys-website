@@ -1270,3 +1270,7 @@ body[dir="rtl"] .hero h1 { font-size: clamp(1.85rem, 4.6vw, 2.95rem); }
 .pillars { max-width: 760px; margin-inline-start: 0; margin-inline-end: auto; }
 .brand-photo-wrap { text-align: start; }
 .value-grid, .flow, .ai-grid { margin-inline-start: 0; }
+
+/* Case studies header aligned to start, like the other content sections */
+.proof .container { text-align: start; }
+.proof .section-sub { margin-inline-start: 0; margin-inline-end: 0; }
