@@ -1159,3 +1159,15 @@ body[dir="rtl"] .stats-kicker { letter-spacing:0; }
 .team .kicker { color: var(--green-dark); background: var(--white); }
 .team h2 { max-width:760px; margin-left:auto; margin-right:auto; margin-bottom:14px; }
 .team .section-sub { margin-left:auto; margin-right:auto; }
+
+/* ===== Stats band — light theme (override) ===== */
+.stats-band { background: var(--sand); }
+.stats-kicker { color: var(--green-dark); background: var(--green-tint); padding: 5px 12px; border-radius: 100px; }
+.stats-h2 { color: var(--ink); }
+.stats-sub { color: var(--ink-soft); }
+.stats-grid { background: rgba(10,42,28,.10); border-color: rgba(10,42,28,.10); }
+.stat { background: var(--white); }
+.stat-n, .stat-n.accent { color: var(--green); }
+.stat-p { color: var(--ink-soft); }
+.stat-src { color: rgba(10,42,28,.45); }
+.stats-foot { color: var(--ink); max-width: 760px; font-weight: 500; }
