@@ -1171,3 +1171,8 @@ body[dir="rtl"] .stats-kicker { letter-spacing:0; }
 .stat-p { color: var(--ink-soft); }
 .stat-src { color: rgba(10,42,28,.45); }
 .stats-foot { color: var(--ink); max-width: 760px; font-weight: 500; }
+
+/* ===== Hero SVG visual ===== */
+.hero-svg { width: 100%; height: auto; max-width: 520px; margin-inline: auto; display: block; animation: heroFloat 6s ease-in-out infinite; }
+@keyframes heroFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@media (prefers-reduced-motion: reduce) { .hero-svg { animation: none; } }
