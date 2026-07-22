@@ -1211,3 +1211,22 @@ body[dir="rtl"] .wa-caption { font-size: 1.08rem; }
 .product-price .price-old { text-decoration: line-through; color: var(--ink-soft); opacity: .55; font-weight: 600; font-size: 0.6em; margin-inline-end: 8px; }
 .product-price .price-now { color: var(--green-dark); font-weight: 800; }
 .product-promo { display: inline-block; background: var(--amber); color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .01em; padding: 5px 12px; border-radius: 100px; margin: -6px 0 14px; }
+
+/* ===== Consistent centred section headers ===== */
+.whatwedo .container, .value .container, .proof .container, .offers .container, .ai-section .container, .foundation .container { text-align: center; }
+.whatwedo .section-sub, .value .section-sub, .proof .section-sub, .offers .section-sub, .foundation .section-sub { margin-left: auto; margin-right: auto; }
+/* card/list bodies stay left-aligned for readability */
+.case .case-body, .value-card, .product, .bl-card, .ai-item { text-align: left; }
+
+/* ===== Pillars: 2x2, centred ===== */
+.pillars { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-left: auto; margin-right: auto; }
+.pillars .pillar { text-align: center; }
+@media (max-width: 600px){ .pillars { grid-template-columns: 1fr; } }
+
+/* ===== AI section + Foundation ===== */
+.ai-section { background: var(--sand); }
+.ai-section .ai-panel { max-width: 900px; margin-inline: auto; }
+.ai-section .ai-title, .ai-section .ai-intro { text-align: center; }
+.ai-section .ai-intro { max-width: 660px; margin-inline: auto; }
+.foundation { background: var(--cream); }
+.foundation .section-sub { max-width: 700px; }
