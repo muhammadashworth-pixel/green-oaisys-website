@@ -1274,3 +1274,11 @@ body[dir="rtl"] .hero h1 { font-size: clamp(1.85rem, 4.6vw, 2.95rem); }
 /* Case studies header aligned to start, like the other content sections */
 .proof .container { text-align: start; }
 .proof .section-sub { margin-inline-start: 0; margin-inline-end: 0; }
+
+/* Newsletter: compact dark band that merges into the footer */
+.newsletter { background: var(--ink); padding: 42px 0 46px; }
+.newsletter .kicker { color: var(--lime); background: rgba(255,255,255,.10); }
+.newsletter h2 { color: var(--cream); font-size: clamp(1.25rem, 2.6vw, 1.65rem); margin-bottom: 10px; }
+.newsletter .section-sub { color: rgba(253,252,248,.72); margin-left: auto; margin-right: auto; }
+.newsletter .news-form input { background: var(--white); color: var(--ink); border: 1px solid rgba(255,255,255,.18); }
+.newsletter + .site-footer { border-top: 1px solid rgba(253,252,248,.10); }
