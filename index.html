@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=15">
+  <link rel="stylesheet" href="css/style.css?v=16">
   <!-- Calendly popup widget -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
@@ -82,20 +82,55 @@
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
-          <div class="chat-stack">
-            <div class="chat-bubble" data-i18n="chat1">Boss, the client wants the price — what do I say?<span class="time">09:14</span></div>
-            <div class="chat-bubble" data-i18n="chat2">Which contract is the latest version? 🤔<span class="time">09:31</span></div>
-            <div class="chat-bubble" data-i18n="chat3">Sara's off — who else knows how renewals work?<span class="time">11:02</span></div>
-            <div class="chat-bubble" data-i18n="chat4">Need your approval on this. And this. And these three??<span class="time">14:47</span></div>
-          </div>
-          <div class="clarity-card">
-            <h4 data-i18n="clarity_title">Active work — today</h4>
-            <ul>
-              <li><span data-i18n="clarity1">New client — onboarding checklist started</span><span class="owner" data-i18n="owner1">Sara</span></li>
-              <li><span data-i18n="clarity2">Renewal — reminder sent, awaiting payment</span><span class="owner" data-i18n="owner2">Ahmed</span></li>
-              <li><span data-i18n="clarity3">Quote — priced from the rate card</span><span class="owner" data-i18n="owner3">Sara</span></li>
-            </ul>
-          </div>
+          <svg class="hero-svg" viewBox="0 0 480 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A calm, organized business dashboard running on systems and AI">
+            <defs>
+              <radialGradient id="heroGlow" cx="52%" cy="42%" r="60%">
+                <stop offset="0" stop-color="#1FC16B" stop-opacity="0.16"/>
+                <stop offset="1" stop-color="#1FC16B" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="heroShadow" x="-25%" y="-25%" width="150%" height="150%">
+                <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0A2A1C" flood-opacity="0.15"/>
+              </filter>
+            </defs>
+            <rect x="0" y="0" width="480" height="440" fill="url(#heroGlow)"/>
+
+            <!-- AI orbit + spark -->
+            <ellipse cx="372" cy="96" rx="74" ry="27" fill="none" stroke="#C9B8FF" stroke-width="2" opacity="0.85" transform="rotate(-18 372 96)"/>
+            <circle cx="306" cy="80" r="7" fill="#6C4BF4"/>
+            <g transform="translate(404,66)"><path d="M11 0 L13.7 8.3 L22 11 L13.7 13.7 L11 22 L8.3 13.7 L0 11 L8.3 8.3 Z" fill="#6C4BF4"/></g>
+            <g transform="translate(70,150)"><path d="M7 0 L8.7 5.3 L14 7 L8.7 8.7 L7 14 L5.3 8.7 L0 7 L5.3 5.3 Z" fill="#B7E219"/></g>
+
+            <!-- main dashboard card -->
+            <g filter="url(#heroShadow)">
+              <rect x="72" y="128" width="316" height="256" rx="22" fill="#FFFFFF"/>
+              <circle cx="96" cy="156" r="5" fill="#B7E219"/><circle cx="115" cy="156" r="5" fill="#1FC16B"/><circle cx="134" cy="156" r="5" fill="#E4F8EE"/>
+              <rect x="96" y="180" width="150" height="12" rx="6" fill="#0A2A1C"/>
+              <rect x="300" y="176" width="64" height="20" rx="10" fill="#EDE8FF"/><rect x="312" y="184" width="40" height="5" rx="2.5" fill="#5230C9"/>
+
+              <!-- row 1 -->
+              <rect x="96" y="210" width="268" height="42" rx="11" fill="#F7F4EC"/>
+              <circle cx="118" cy="231" r="9.5" fill="#1FC16B"/><path d="M113.5 231 l3 3 l6.5 -6.5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <rect x="138" y="225" width="128" height="8" rx="4" fill="#2E4A3C"/>
+              <rect x="316" y="223" width="34" height="16" rx="8" fill="#E4F8EE"/><rect x="324" y="229" width="18" height="4" rx="2" fill="#107044"/>
+
+              <!-- row 2 -->
+              <rect x="96" y="260" width="268" height="42" rx="11" fill="#F7F4EC"/>
+              <circle cx="118" cy="281" r="9.5" fill="#1FC16B"/><path d="M113.5 281 l3 3 l6.5 -6.5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <rect x="138" y="275" width="160" height="8" rx="4" fill="#2E4A3C"/>
+              <rect x="316" y="273" width="34" height="16" rx="8" fill="#EDE8FF"/><rect x="324" y="279" width="18" height="4" rx="2" fill="#5230C9"/>
+
+              <!-- row 3 (in progress) -->
+              <rect x="96" y="310" width="268" height="42" rx="11" fill="#F7F4EC"/>
+              <circle cx="118" cy="331" r="9.5" fill="none" stroke="#B7E219" stroke-width="3"/>
+              <rect x="138" y="325" width="104" height="8" rx="4" fill="#2E4A3C"/>
+              <rect x="316" y="323" width="34" height="16" rx="8" fill="#E4F8EE"/><rect x="324" y="329" width="18" height="4" rx="2" fill="#107044"/>
+            </g>
+
+            <!-- flow nodes -->
+            <path d="M72 312 C 40 312, 40 250, 72 250" fill="none" stroke="#1FC16B" stroke-width="2.5" opacity="0.55"/>
+            <circle cx="72" cy="312" r="10" fill="#1FC16B"/>
+            <circle cx="48" cy="250" r="7" fill="#107044"/>
+          </svg>
         </div>
       </div>
     </section>
