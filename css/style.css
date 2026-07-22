@@ -1206,3 +1206,8 @@ body[dir="rtl"] .wa-mock { font-family: var(--font-ar); }
 .wa-msg p { font-size: .9rem; }
 .wa-caption { text-align: center; max-width: 384px; margin: 18px auto 0; font-weight: 600; color: var(--ink); font-size: 1.02rem; line-height: 1.4; }
 body[dir="rtl"] .wa-caption { font-size: 1.08rem; }
+
+/* ===== Founding offer price ===== */
+.product-price .price-old { text-decoration: line-through; color: var(--ink-soft); opacity: .55; font-weight: 600; font-size: 0.6em; margin-inline-end: 8px; }
+.product-price .price-now { color: var(--green-dark); font-weight: 800; }
+.product-promo { display: inline-block; background: var(--amber); color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .01em; padding: 5px 12px; border-radius: 100px; margin: -6px 0 14px; }
